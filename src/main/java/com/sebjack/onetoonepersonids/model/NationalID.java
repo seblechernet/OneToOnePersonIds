@@ -1,10 +1,10 @@
 package com.sebjack.onetoonepersonids.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+
+@Entity
 public class NationalID {
 
     @Id
@@ -13,6 +13,7 @@ public class NationalID {
     private String dateIssued;
     private String location;
 
+    @JsonIgnore
     @OneToOne(mappedBy = "nationalID")
     private Person person;
 

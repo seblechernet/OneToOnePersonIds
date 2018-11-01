@@ -81,7 +81,7 @@ public class DataLoader implements CommandLineRunner {
         //create person
         //         public Person(String name, DriverLicense driverLicense, NationalID nationalID, Passport passport)
         Person person2 = new Person();
-        person1.setName("Jack");
+        person2.setName("Jack");
         //link person && DriverLicense
         person2.setDriverLicense(driverLicense2);
         driverLicense2.setPerson(person2);

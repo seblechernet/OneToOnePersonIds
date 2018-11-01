@@ -1,5 +1,7 @@
 package com.sebjack.onetoonepersonids.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +14,7 @@ public class Person {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name ="DL_ID")
+
     private DriverLicense driverLicense;
 
     @OneToOne(cascade = CascadeType.ALL)

@@ -1,5 +1,7 @@
 package com.sebjack.onetoonepersonids.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,7 @@ public class DriverLicense {
     private String location;
 
     @OneToOne(mappedBy = "driverLicense")
+    @JsonIgnore
     private Person person;
 
 

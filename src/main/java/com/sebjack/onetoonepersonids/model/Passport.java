@@ -1,5 +1,7 @@
 package com.sebjack.onetoonepersonids.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,7 @@ public class Passport {
     private String location;
 
     @OneToOne(mappedBy = "passport")
+    @JsonIgnore
     private Person person;
 
     public long getId() {
